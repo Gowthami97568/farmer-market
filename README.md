@@ -30,27 +30,9 @@ A modern **React-based e-commerce web application** to buy fresh fruits and vege
 
 ## 📂 Project Structure
 
-src/
-│
-├── pages/
-│ ├── ProductListing.tsx
-│ ├── Cart.tsx
-│ ├── CheckoutPage.tsx
-│ ├── OrdersPage.tsx
-│ ├── AdminPage.tsx
-│ └── SuccessPage.tsx
-│
-├── stores/
-│ ├── cartStore.ts
-│ └── ordersStore.ts
-│
-├── data/
-│ └── products.ts
-│
-├── App.tsx
-└── main.tsx
 
----
+<img width="704" height="655" alt="{C8233550-5195-4B87-B4CC-642975C85BC0}" src="https://github.com/user-attachments/assets/e6a0c124-c189-4138-8be5-cbc814a8f1bf" />
+
 
 ## ▶️ Run Locally
 
