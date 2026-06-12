@@ -1,5 +1,7 @@
+
 import { useNavigate } from "react-router-dom";
 import { useCartStore } from "../stores/cartStore";
+import React from "react";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -9,9 +11,8 @@ const LandingPage = () => {
 
   return (
     <div style={{ fontFamily: "Arial, sans-serif" }}>
-
       {/* 🔥 NAVBAR */}
-      <div style ={navbarStyle}>
+      <div style={navbarStyle}>
         <h2 style={{ cursor: "pointer" }}>🌱 Farmer Market</h2>
 
         <div style={{ display: "flex", gap: "25px" }}>
@@ -43,8 +44,8 @@ const LandingPage = () => {
           <button
             onClick={() => navigate("/products")}
             style={btnStyle}
-            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             Shop Now →
           </button>
@@ -53,8 +54,8 @@ const LandingPage = () => {
         <img
           src="https://hips.hearstapps.com/hmg-prod/images/fresh-vegetables-in-basket-on-wooden-background-royalty-free-image-1676394780.jpg"
           style={imgStyle}
-          onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-          onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
         />
       </div>
 
@@ -63,7 +64,6 @@ const LandingPage = () => {
         <h2>Shop by Category</h2>
 
         <div style={{ display: "flex", justifyContent: "center", gap: "40px", marginTop: "30px" }}>
-          
           {["Vegetables 🥕", "Fruits 🍎"].map((cat, i) => (
             <div
               key={i}
@@ -84,7 +84,6 @@ const LandingPage = () => {
               <p style={{ marginTop: "10px", fontWeight: "bold" }}>{cat}</p>
             </div>
           ))}
-
         </div>
       </div>
 
@@ -101,8 +100,8 @@ const LandingPage = () => {
             <div
               key={item.title}
               style={{ transition: "0.3s" }}
-              onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"}
-              onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+              onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
@@ -116,8 +115,6 @@ const LandingPage = () => {
         <h2 style={{ textAlign: "center" }}>Contact Us 📩</h2>
 
         <div style={contactWrapper}>
-          
-          {/* INFO */}
           <div>
             <h3>Get in Touch</h3>
             <p>📍 Hyderabad, India</p>
@@ -125,20 +122,15 @@ const LandingPage = () => {
             <p>📧 farmersmarket@gmail.com</p>
           </div>
 
-          {/* FORM */}
           <div style={{ width: "300px" }}>
             <input placeholder="Name" style={inputStyle} />
             <input placeholder="Email" style={inputStyle} />
             <textarea placeholder="Message" rows={4} style={inputStyle}></textarea>
 
-            <button
-              onClick={() => alert("Message sent!")}
-              style={btnStyle}
-            >
+            <button onClick={() => alert("Message sent!")} style={btnStyle}>
               Send Message
             </button>
           </div>
-
         </div>
       </div>
 
@@ -146,13 +138,12 @@ const LandingPage = () => {
       <div style={{ background: "#16a34a", color: "white", padding: "20px", textAlign: "center" }}>
         © 2026 Farmer Market 🌱
       </div>
-
     </div>
   );
 };
 
-/* STYLES */
-const navbarStyle = {
+/* ✅ FIXED TYPES */
+const navbarStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   padding: "15px 40px",
@@ -163,9 +154,9 @@ const navbarStyle = {
   zIndex: 100
 };
 
-const navItem = { cursor: "pointer" };
+const navItem: React.CSSProperties = { cursor: "pointer" };
 
-const cartCount = {
+const cartCount: React.CSSProperties = {
   position: "absolute",
   top: "-8px",
   right: "-10px",
@@ -176,7 +167,7 @@ const cartCount = {
   fontSize: "12px"
 };
 
-const heroStyle = {
+const heroStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   padding: "60px 40px",
@@ -184,7 +175,7 @@ const heroStyle = {
   color: "white"
 };
 
-const btnStyle = {
+const btnStyle: React.CSSProperties = {
   marginTop: "20px",
   padding: "12px",
   borderRadius: "30px",
@@ -192,13 +183,13 @@ const btnStyle = {
   cursor: "pointer"
 };
 
-const imgStyle = {
+const imgStyle: React.CSSProperties = {
   width: "300px",
   borderRadius: "10px",
   transition: "0.3s"
 };
 
-const cardStyle = {
+const cardStyle: React.CSSProperties = {
   cursor: "pointer",
   padding: "20px",
   background: "#fff",
@@ -206,7 +197,7 @@ const cardStyle = {
   transition: "0.3s"
 };
 
-const contactWrapper = {
+const contactWrapper: React.CSSProperties = {
   display: "flex",
   justifyContent: "center",
   gap: "40px",
@@ -214,7 +205,7 @@ const contactWrapper = {
   flexWrap: "wrap"
 };
 
-const inputStyle = {
+const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "10px",
   marginBottom: "10px",
@@ -222,12 +213,12 @@ const inputStyle = {
   border: "1px solid #ccc"
 };
 
-const hoverCard = (e, hover) => {
+/*  FIXED TYPES */
+const hoverCard = (e: React.MouseEvent<HTMLDivElement>, hover: boolean) => {
   if (hover) {
     e.currentTarget.style.transform = "translateY(-10px)";
   } else {
     e.currentTarget.style.transform = "translateY(0)";
   }
 };
-
 export default LandingPage;
