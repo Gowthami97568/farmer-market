@@ -39,15 +39,7 @@ A modern **React-based e-commerce web application** to buy fresh fruits and vege
 ```bash
 npm install
 npm run dev
-```
-
----
-
-## 🌍 Live Demo
-
-(Will add after deployment)
-
----
+``'
 
 ## 📌 Future Improvements
 
